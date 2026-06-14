@@ -49,7 +49,7 @@ i2s_audio:
 
 # External component reference for YB Audio Player
 external_components:
-  - source: github://HansLindkvist/YB-ESP32-S3-DAC/esphome_custom_component
+  - source: github://HansLindkvist/YB-ESP32-S3-DAC/esphome_custom_component/components
     components: [yb_audio_player]
 
 # YB Audio Player component

@@ -36,7 +36,7 @@ The easiest way to add this component to your ESPHome device is to reference it 
 
 ```yaml
 external_components:
-  - source: github://HansLindkvist/YB-ESP32-S3-DAC/esphome_custom_component
+  - source: github://HansLindkvist/YB-ESP32-S3-DAC/esphome_custom_component/components
     components: [yb_audio_player]
 ```
 
@@ -93,9 +93,9 @@ i2s_audio:
   i2s_mclk_pin: GPIO4
   bits_per_sample: 16
 
-# External component reference
+# External component reference - note the /components at the end
 external_components:
-  - source: github://HansLindkvist/YB-ESP32-S3-DAC/esphome_custom_component
+  - source: github://HansLindkvist/YB-ESP32-S3-DAC/esphome_custom_component/components
     components: [yb_audio_player]
 
 # YB Audio Player component
@@ -211,7 +211,7 @@ esphome logs esphome_example_config.yaml
 ### Component Import Errors
 
 If you get an error like `Could not find components folder for source`, make sure:
-- The source path points to the folder containing the `components/` subdirectory
+- The source path includes `/components` at the end: `github://HansLindkvist/YB-ESP32-S3-DAC/esphome_custom_component/components`
 - Your GitHub repository has the correct folder structure: `esphome_custom_component/components/yb_audio_player/`
 - You're using `external_components` (not `externally_defined_custom_components`)
 
