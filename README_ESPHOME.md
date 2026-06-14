@@ -16,11 +16,12 @@ This custom component enables the **YB-ESP32-S3-DAC** audio development board to
 
 ```
 esphome_custom_component/
-└── yb_audio_player/
-    ├── __init__.py          # ESPHome component configuration
-    ├── manifest.json        # Component metadata
-    ├── yb_audio_player.h    # C++ header file
-    └── yb_audio_player.cpp  # C++ implementation
+└── components/
+    └── yb_audio_player/
+        ├── __init__.py          # ESPHome component configuration
+        ├── manifest.json        # Component metadata
+        ├── yb_audio_player.h    # C++ header file
+        └── yb_audio_player.cpp  # C++ implementation
 ```
 
 ## Installation
@@ -53,7 +54,7 @@ If you prefer to work with the component locally:
 
 2. **Copy the component:**
    ```bash
-   cp -r YB-ESP32-S3-DAC/esphome_custom_component/yb_audio_player ./custom_components/
+   cp -r YB-ESP32-S3-DAC/esphome_custom_component ./custom_components/
    ```
 
 3. **Reference it locally in your YAML:**
@@ -209,7 +210,10 @@ esphome logs esphome_example_config.yaml
 
 ### Component Import Errors
 
-If you get an error like `Unable to import component externally_defined_custom_components`, make sure you're using `external_components` (not `externally_defined_custom_components`).
+If you get an error like `Could not find components folder for source`, make sure:
+- The source path points to the folder containing the `components/` subdirectory
+- Your GitHub repository has the correct folder structure: `esphome_custom_component/components/yb_audio_player/`
+- You're using `external_components` (not `externally_defined_custom_components`)
 
 ### I2C Communication Issues
 
