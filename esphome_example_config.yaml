@@ -4,8 +4,11 @@
 esphome:
   name: yb-esp32-s3-dac-audio
   friendly_name: YB ESP32 S3 DAC Audio Player
-  platform: ESP32
+
+esp32:
   board: esp32s3box
+  framework:
+    type: arduino
 
 # WiFi configuration
 wifi:
