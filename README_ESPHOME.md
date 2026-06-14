@@ -70,8 +70,11 @@ Add the following to your ESPHome device configuration:
 ```yaml
 esphome:
   name: yb-esp32-s3-dac-audio
-  platform: ESP32
+
+esp32:
   board: esp32s3box
+  framework:
+    type: arduino
 
 # I2C configuration (for DAC control)
 i2c:
@@ -204,6 +207,10 @@ esphome logs esphome_example_config.yaml
 
 ## Troubleshooting
 
+### Component Import Errors
+
+If you get an error like `Unable to import component externally_defined_custom_components`, make sure you're using `external_components` (not `externally_defined_custom_components`).
+
 ### I2C Communication Issues
 
 - Ensure GPIO8 (SDA) and GPIO9 (SCL) are properly configured
@@ -228,17 +235,12 @@ esphome logs esphome_example_config.yaml
 
 ### OTA Updates
 
-OTA (Over-The-Air) updates are enabled by default without a password. If you want to secure OTA updates with a password, add to your configuration:
+OTA (Over-The-Air) updates are enabled by default with a password. If you want to change the OTA password, update your configuration:
 
 ```yaml
 ota:
-  password: "your_ota_password"
-```
-
-Then add the password to your secrets.yaml:
-
-```yaml
-ota_password: "your_ota_password"
+  - platform: esphome
+    password: "your_new_ota_password"
 ```
 
 ## References

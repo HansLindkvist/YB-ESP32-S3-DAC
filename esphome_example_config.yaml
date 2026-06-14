@@ -47,8 +47,8 @@ i2s_audio:
   i2s_mclk_pin: GPIO4
   bits_per_sample: 16
 
-# Custom component for YB-ESP32-S3-DAC
-externally_defined_custom_components:
+# External component reference for YB Audio Player
+external_components:
   - source: github://HansLindkvist/YB-ESP32-S3-DAC/esphome_custom_component
     components: [yb_audio_player]
 
