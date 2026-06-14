@@ -21,6 +21,8 @@ logger:
 
 # Enable Home Assistant API
 api:
+  encryption:
+    key: "GL4VhWY85ih/6596JM1Tc2C9qmE2co+0zoO1gb/+24w="
 
 ota:
   # OTA updates enabled. Password can be added later if desired.

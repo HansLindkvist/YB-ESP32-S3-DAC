@@ -121,7 +121,7 @@ The component uses the following GPIO pins on the YB-ESP32-S3-DAC:
 
 Refer to `esphome_example_config.yaml` for a fully working configuration including:
 - WiFi setup with fallback AP
-- Home Assistant API integration
+- Home Assistant API integration with encryption
 - Logging configuration
 - I2C and I2S interfaces
 - YB Audio Player component
