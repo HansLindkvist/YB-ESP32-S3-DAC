@@ -25,7 +25,8 @@ api:
     key: "GL4VhWY85ih/6596JM1Tc2C9qmE2co+0zoO1gb/+24w="
 
 ota:
-  # OTA updates enabled. Password can be added later if desired.
+  - platform: esphome
+    password: "0f8c9dba4ca43f44e30b3a6b6407a132"
 
 # I2C configuration (for TLV320DAC3101 communication)
 i2c:
