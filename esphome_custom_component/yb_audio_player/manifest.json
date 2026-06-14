@@ -1,7 +1,0 @@
-{
-  "version": "1.0.0",
-  "documentation": "https://github.com/HansLindkvist/YB-ESP32-S3-DAC",
-  "dependencies": [],
-  "codeowners": ["@HansLindkvist"],
-  "requirements": []
-}
